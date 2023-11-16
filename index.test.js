@@ -1,6 +1,6 @@
 
 const request = require('supertest');
-const app = require('../index');
+const app = require('./index');
 
 describe('Pruebas Unitarias del Hola Mundo', () => {
   it('Debería retornar ¡Hola, mundo! en la ruta "/"', async () => {
