@@ -1,5 +1,5 @@
 const request = require('supertest');
-const app = require('../index');
+const app = require('./index');
 
 describe('Pruebas de la aplicación', () => {
   it('Debería retornar ¡Hola, mundo! en la ruta "/"', async () => {
@@ -7,8 +7,8 @@ describe('Pruebas de la aplicación', () => {
     expect(response.text).toBe('¡Hola, mundo!');
   });
 
-
   afterAll((done) => {
-    app.close(done); 
+    const server = app.listen(); 
+    server.close(done); 
   });
 });
