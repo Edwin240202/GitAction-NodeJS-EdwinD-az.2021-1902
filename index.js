@@ -1,13 +1,7 @@
-const express = require('express');
-const app = express();
-const port = 3000;
+function saludarConNombreYMatricula() {
+    const nombre = 'EDWIN DAVID DÍAZ MENDOZA';
+    const matricula = '2021-1902';
+    return `Hola, mi nombre es ${nombre} y mi matrícula es ${matricula}.`;
+}
 
-app.get('/', (req, res) => {
-  res.send('¡Hola, mundo!');
-});
-
-app.listen(port, () => {
-  console.log(`La aplicación está corriendo en http://localhost:${port}`);
-});
-
-module.exports = app; 
+module.exports = saludarConNombreYMatricula;

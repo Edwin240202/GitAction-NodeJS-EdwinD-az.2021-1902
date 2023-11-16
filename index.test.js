@@ -1,14 +1,5 @@
-const request = require('supertest');
-const app = require('./index');
+const saludo = require('./index');
 
-describe('Pruebas de la aplicación', () => {
-  it('Debería retornar ¡Hola, mundo! en la ruta "/"', async () => {
-    const response = await request(app).get('/');
-    expect(response.text).toBe('¡Hola, mundo!');
-  });
-
-  afterAll((done) => {
-    const server = app.listen(); 
-    server.close(done); 
-  });
+test("Debe devolver un saludo con Mi Nombre y Mi Matrícula", () => {
+    expect(saludo()).toBe("Hola, mi nombre es EDWIN DAVID DÍAZ MENDOZA y mi matrícula es 2021-1902.");
 });
