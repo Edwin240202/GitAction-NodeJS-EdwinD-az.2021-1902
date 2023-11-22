@@ -5,5 +5,3 @@ function saludarConNombreYMatricula() {
 }
 
 module.exports = saludarConNombreYMatricula;
-
-//comentario nuevo
